@@ -1,26 +1,38 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { Component } from "react";
+import "./App.css";
+import firebase from "firebase";
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+firebase.initializeApp({
+  apiKey: "AIzaSyDLoqcbTDMFuurtAyDgVEKZ6qwo0j0Osjk",
+  authDomain: "fir-auth-tutorial-ed11f.firebaseapp.com"
+})
+
+class App extends Component {
+  state = { isSignedIn: false }
+  uiConfig = {
+    signInFlow: "popup",
+    signInOptions: [
+      firebase.auth.GithubAuthProvider.PROVIDER_ID
+    ],
+    callbacks: {
+      signInSuccess: () => false
+    }
+  }
+
+  render() {
+    return (
+      <div className="App">
+        {this.state.isSignedIn ? (
+          <span>
+            <div>Signed In!</div>
+            :
+          </span>
+        ) : (
+          <div>You are not signed in</div>
+        )}
+      </div>
+    )
+  }
 }
 
-export default App;
+export default App
