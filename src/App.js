@@ -3,8 +3,8 @@ import "./App.css";
 import firebase from "firebase";
 
 firebase.initializeApp({
-  apiKey: "AIzaSyDLoqcbTDMFuurtAyDgVEKZ6qwo0j0Osjk",
-  authDomain: "fir-auth-tutorial-ed11f.firebaseapp.com"
+  apiKey: "AIzaSyCOGABI9qz9HSUjmzOTJBkL6VUvrAA_hss",
+  authDomain: "github-issue-manager-31755.firebaseapp.com"
 })
 
 class App extends Component {
