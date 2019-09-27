@@ -28,8 +28,14 @@ class App extends Component {
 
   render() {
     return (
-      <div className="App">
-        {this.state.isSignedIn ? (
+      <main>
+        <div className="App">
+       
+      </div>
+      <h2>
+        Git issue manager listing!
+      </h2>
+      {this.state.isSignedIn ? (
           <span>
             <div>Signed In!</div>
             <button onClick={() => firebase.auth().signOut()}>Sign out!</button>
@@ -41,7 +47,13 @@ class App extends Component {
           uiConfig={this.uiConfig}
           firebaseAuth={firebase.auth()} />
         )}
-      </div>
+      <p>
+        This project was bootstrapped with Create React App and contains
+        three directories, <code>/public</code> for static assets<code>/src</code>
+        for components and content.
+      </p>
+      </main>
+
     )
   }
 }
