@@ -1,4 +1,4 @@
-Github issue manager project.
+### Github issue manager project.
 
 In case you get an error when trying to login regarding 3rd part cookies go in chrome settings chrome://settings/content/cookies, add the following string to the cookies whitelist:
 
